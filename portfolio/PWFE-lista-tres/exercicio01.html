@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora usando arrow function</title>
+</head>
+<body>
+  <script>
+    // arrow functions
+    const operacoes = {
+      adicao: (a, b) => a + b,
+      subtracao: (a, b) => a - b,
+      multiplicacao: (a, b) => a * b,
+      divisao: (a, b) => b !== 0 ? a / b : 'Erro: divisão por zero'
+    };
+    //inputs pedidos para o usuario
+    let operacao = prompt("Queridissímo usuário, please digite a operação desejada - adicao, subtracao, multiplicacao ou divisao:").toLowerCase();
+    let a = Number(prompt("Qual será o primeiro número? "));
+    let b = Number(prompt("Qual será o segundo número? "));
+    //rodando o calculo bonitinho
+    const calcular = operacoes[operacao];
+    const resultado = calcular ? calcular(a, b) : "Operação inválida";
+    //exibindo para o usuario na telinha
+    document.write(`Valor final da conta: ${resultado} :D`);
+  </script>
+</body>
+</html>
